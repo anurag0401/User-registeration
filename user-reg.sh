@@ -38,7 +38,7 @@ else
 fi
 
 read -p "enter password:" Password
-Password_Pattern="^[a-zA-Z]{8,}$"
+Password_Pattern="^(?=.{10,}$)(?=.*[A-Z]).*$"
 if [[ $Password =~ $Password_Pattern ]]
 then
 	echo "valid"
