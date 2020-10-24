@@ -20,8 +20,17 @@ else
 fi
 
 read -p "enter email:" email
-email_Pattern="^[a-zA-Z]{3}.?([a-zA-Z]{3})@[a-zA-Z]{2}.[a-zA-Z]{2}.?([a-zA-Z]{2})?"
+email_Pattern="^[a-zA-Z]{3,}.?([a-zA-Z]{3,})@[a-zA-Z]{2,}.[a-zA-Z]{2,}.?([a-zA-Z]{2,})?"
 if [[ $email =~ $email_Pattern ]]
+then
+        echo "valid"
+else
+        echo "invalid"
+fi
+
+read -p "enter Mobile-Number:" Mobile_number
+MobileNumber_Pattern="^[0-9]{2}[[:space:]][0-9]{10}$"
+if [[ $Mobile_number =~ $MobileNumber_Pattern ]]
 then
         echo "valid"
 else
