@@ -18,3 +18,12 @@ then
 else
         echo "invalid"
 fi
+
+read -p "enter email:" email
+email_Pattern="^[a-zA-Z]{3}.?([a-zA-Z]{3})@[a-zA-Z]{2}.[a-zA-Z]{2}.?([a-zA-Z]{2})?"
+if [[ $email =~ $email_Pattern ]]
+then
+        echo "valid"
+else
+        echo "invalid"
+fi
