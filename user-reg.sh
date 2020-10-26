@@ -2,7 +2,7 @@
 echo "Ensure all validations are in place during user entry"
 
 read -p "enter firstname:" first_name
-firstname_Pattern="^[A-Z][a-z]{2,}$"
+firstname_Pattern="^[A-Z][a-z]{1,3}$"
 if [[ $first_name =~ $firstname_Pattern ]]
 then
 	echo "valid"
@@ -38,7 +38,7 @@ else
 fi
 
 read -p "enter password:" Password
-Password_Pattern="^(?=.{10,}$)(?=.*?[A-Z])(?=.*?[0-9]).*$"
+Password_Pattern="^(?=.{10,}$)(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W).*$"
 if [[ $Password =~ $Password_Pattern ]]
 then
 	echo "valid"
