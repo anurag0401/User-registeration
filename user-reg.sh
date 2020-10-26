@@ -20,7 +20,7 @@ else
 fi
 
 read -p "enter email:" email
-email_Pattern="^[a-zA-Z]{3,}.?([a-zA-Z]{3,})@[a-zA-Z]{2,}.[a-zA-Z]{2,}.?([a-zA-Z]{2,})?"
+email_Pattern="^[0-9a-zA-Z]+([_.+-][a-zA-Z0-9]+)?@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})?"
 if [[ $email =~ $email_Pattern ]]
 then
         echo "valid"
